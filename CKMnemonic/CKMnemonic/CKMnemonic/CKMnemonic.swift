@@ -111,7 +111,7 @@ public class CKMnemonic: NSObject {
 		let status = SecRandomCopyBytes(kSecRandomDefault, count, UnsafeMutablePointer<UInt8>(mutating: bytes))
 		// print(status)
 		if status != -1 {
-			let data = Data(bytes: bytes)
+			let data = Data(bytes)
 			let hexString = data.toHexString()
 			// print(hexString)
 			
